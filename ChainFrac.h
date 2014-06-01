@@ -10,7 +10,7 @@
 
         Frac like
 
-        A = (n+k*sqrt(f))/d
+        A = k*(n+sqrt(f))/d
 
 */
 
@@ -35,7 +35,7 @@ public:
     frac(int _n, int _d);
     frac(int _f, int _n, int _d);
     frac(int _f, int _n, int _d, int _k);
-    frac(const frac &);                     //конструктор копіювання
+    frac(const frac &);                     //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
     ~frac();
 
     void set_param(int _f);
@@ -75,7 +75,7 @@ public:
     frac converse();
 
     frac& operator=(const frac& right) {
-        //перевірка на самоприсвоювання
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (this == &right) {
             return *this;
         }
@@ -144,7 +144,7 @@ bool operator != (const frac& left, const int & value ) {
 }
 /*
 const frac operator+(const frac& left, const frac& right) {
-    //повернути конструктором
+    //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
 }
 */
 const frac operator-(const frac& left, const int& right) {
@@ -295,7 +295,7 @@ public:
     int get_w_by_number(int n);
 
     poly& operator=(const poly& right) {
-        //перевірка на самоприсвоювання
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (this == &right) {
             return *this;
         }
@@ -493,7 +493,7 @@ public:
     polyfrac(poly &_n, poly &_d);
     friend polyfrac& operator+=(polyfrac& left, const int& right);
     polyfrac& operator=(const polyfrac& right) {
-        //перевірка на самоприсвоювання
+        //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         if (this == &right) {
             return *this;
         }
@@ -504,8 +504,8 @@ public:
 
     void print(void);
     void converse(void);
-    poly to_solve(void); //формування многочлена для розв*язку
-    frac solve(bool sign);        //пошук розв*язку
+    poly to_solve(void); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅ*пїЅпїЅпїЅпїЅ
+    frac solve(bool sign);        //пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ*пїЅпїЅпїЅпїЅ
 };
 
 polyfrac::polyfrac() {
@@ -664,7 +664,7 @@ bool chain::convertToFrac() {
             x = x + v[i];
         }
         r = x;
-    } else { //є період, дріб містить радикал
+    } else { //пїЅ пїЅпїЅпїЅпїЅпїЅ, пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         poly x(1);
         poly y(1,0);
         polyfrac a(x,y);
