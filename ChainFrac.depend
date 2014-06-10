@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1401625584 source:g:\programist\c++\codeblock\chainfrac\main.cpp
+	<iostream>
+	"Chain.h"
+	<vector>
+
+1401625607 g:\programist\c++\codeblock\chainfrac\chain.h
+	<math.h>
+	<iostream>
+	<vector>
+
